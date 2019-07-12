@@ -38,3 +38,6 @@ that might emerge in case of inproper use.
 Your v0.8 profile will not be modified unless you use the `-f`/ `--Force` option. As always when touching data you 
 do not want to loose it is recommended, however, that you make copies of your old profiles before using this tool.
 
+## Developer Notes
+
+Requires to add [CommandLine Parser](https://www.nuget.org/packages/CommandLineParser/) from NuGet.
