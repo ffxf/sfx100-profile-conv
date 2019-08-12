@@ -21,6 +21,9 @@ This little CLI tools helps to convert the older format into the new one.
 
 ### Examples
 
+    # Create converted coolprofile.xml taken from SFBv0.8 profile with path in your local dir
+    <exec_path>/Profile-Converter.exe -i <v0.8path>/profiles/coolprofile.xml
+    
     # Create converted coolprofile.xml taken from SFBv0.8 profiles dir in your local dir
     <exec_path>/Profile-Converter.exe -i coolprofile.xml -s <sfb08_path>/profiles
     
