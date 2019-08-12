@@ -1,5 +1,9 @@
 # SFX100 Profile Converter
 
+## Installation
+
+See [releases](https://github.com/ffxf/sfx100-profile-conv/releases) for further information.
+
 ## Convert v0.8.x SimFeedback Profiles to the v0.9.x Format
 
 The upcoming SimFeedback v0.9 release for the [SFX-100 motion platform](https://opensfx.com/) 
