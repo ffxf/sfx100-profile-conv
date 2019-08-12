@@ -27,13 +27,7 @@ namespace SFB_Profile_Converter
 
             if (opts.Output == null)
             {
-                opts.Output = opts.Input;
-                if (string.IsNullOrEmpty(opts.SrcDir) ? string.IsNullOrEmpty(opts.DestDir) : (opts.SrcDir == opts.DestDir) &&
-                    !opts.Force)
-                {
-                    Console.Write("Output file name not set. Add '-f/--force' to overwrite input file.");
-                    Environment.Exit(1);
-                }
+                opts.Output = Path.GetFileName(opts.Input);
             }
 
             if (opts.SrcDir == null)
@@ -68,6 +62,14 @@ namespace SFB_Profile_Converter
             if (!File.Exists(fp))
             {
                 Console.WriteLine($"Input file path '{fp}' does not exist! Existing.");
+                Environment.Exit(1);
+            }
+
+            fp = Path.Combine(opts.DestDir, opts.Output);
+            if (File.Exists(fp) && !opts.Force)
+            {
+                Console.Write("Output file exists. Add '-f/--force' to overwrite.\n" +
+                    "Be sure it is not your input file (can happen easily if the destination directory has not been set.)");
                 Environment.Exit(1);
             }
 
