@@ -37,6 +37,15 @@ This little CLI tools helps to convert the older format into the new one.
     # Overwrite coolprofile.xml in converted format - only recommened if working on a copy of the profile
     <exec_path>/Profile-Converter.exe -i coolprofile.xml -f
 
+Converting the complete profiles directory can be done easily, e.g. using PowerShell:
+
+     # Executed from root directory in which SFBv0.8, the converter directory and
+     # the destination directory are installed.
+     # SFBv0.8 is in subdirectory 'SFBv08'
+     # Profile converter has been unzipped into 'Profile-Converter'
+     # A directory 'ConvProfs' has been created before executing
+     foreach ($f in Get-ChildItem -Path SFBv08\profiles ) { Profile-Converter\Profile-Converter.exe -i $f.name -d ConvProfs }
+
 ## Known Issues
 
 Given the tool will likely only been used for a short period of time no attempt was made to catch all potential errors
