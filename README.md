@@ -44,7 +44,7 @@ Converting the complete profiles directory can be done easily, e.g. using PowerS
      # SFBv0.8 is in subdirectory 'SFBv08'
      # Profile converter has been unzipped into 'Profile-Converter'
      # A directory 'ConvProfs' has been created before executing
-     foreach ($f in Get-ChildItem -Path SFBv08\profiles ) { Profile-Converter\Profile-Converter.exe -i $f.name -d ConvProfs }
+     foreach ($f in Get-ChildItem -Path SFBv08\profiles ) { Profile-Converter\Profile-Converter.exe -i SFBv08\profiles\$f -d ConvProfs }
 
 ## Known Issues
 
